@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skycast Weather App</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Leaflet Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>🌤 Skycast</h1>
+
+  <div class="search-bar">
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Search</button>
+  </div>
+
+  <div id="weatherInfo"></div>
+  <div id="tomorrowInfo"></div>
+
+  <h2>Today's Temperature</h2>
+  <canvas id="todayChart"></canvas>
+
+  <h2>Weekly Temperature</h2>
+  <canvas id="weekChart"></canvas>
+
+  <h2>Location</h2>
+  <div id="map"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
